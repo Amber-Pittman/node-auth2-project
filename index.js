@@ -11,8 +11,9 @@ const port = process.env.PORT || 5000
 server.use(cors())
 server.use(helmet())
 server.use(express.json())
-
 server.use(cookieParser())
+
+
 server.use("/auth", authRouter)
 server.use("/users", usersRouter)
 
